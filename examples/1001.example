@@ -1,0 +1,26 @@
+=== Name
+Build Table From JavaScript
+
+=== Description
+crazytable.js can build an HTML table from JavaScript data.
+
+=== HTML
+<div id="fruits"></div>
+
+=== JS
+var fruits = [
+  { name: "apple", color: "red", "quantity": 11 },
+  { name: "banana", color: "yellow", "quantity": 10 },
+  { name: "orange", color: "orange", "quantity": 8 }
+];
+
+var columns = [
+  { headerHTML: "Name", cellHTML: "{name}" },
+  { headerHTML: "Color", cellHTML: "{color}" },
+  { headerHTML: "Quantity", cellHTML: "{quantity}" }
+];
+
+var table = new CrazyTable('fruits', {
+  columns: columns,
+  data: fruits
+});

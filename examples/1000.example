@@ -1,0 +1,32 @@
+=== Name
+Enhance HTML Table
+
+=== Description
+crazytable.js can enhance an existing table in your HTML.
+
+=== HTML
+<table id="fruits">
+  <tr>
+    <th>Name</th>
+    <th>Color</th>
+    <th>Quantity</th>
+  </tr>
+  <tr>
+    <td>apple</td>
+    <td>red</td>
+    <td>11</td>
+  </tr>
+  <tr>
+    <td>banana</td>
+    <td>yellow</td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td>orange</td>
+    <td>orange</td>
+    <td>8</td>
+  </tr>
+</table>
+
+=== JS
+var table = new CrazyTable('fruits');
