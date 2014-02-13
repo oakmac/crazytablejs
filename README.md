@@ -55,6 +55,8 @@ table.lock(); // locks the table from sorting, searching, pagination, etc
 table.unlock(); // unlocks the table
 table.toggleLock();
 
+table.state(); // returns an object of the table's current state (sort, search, page, etc)
+
 Events:
 - onMouseEnterRow
 - onMouseLeaveRow
@@ -96,3 +98,10 @@ Areas of *no* concern:
 - anything "inside" a cell or header (HTML)
 - methods of requesting data (ie: AJAX)
 - the way the table looks (ie: CSS), crazytable provides plenty of access to add CSS classes and even style attributes directly on <td> elements, but purposefully does not do any style calculations on the table
+
+Open questions:
+- how to handle colgroups?
+- how to handle rowspans?
+- tfoot?
+- long-scrolling tables vs pagination?
+- how to handle millions of rows? does this requirement make sense?
