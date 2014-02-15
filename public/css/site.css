@@ -3,6 +3,7 @@
 ------------------------------------------------------------------------------*/
 .body-b376b {
   background: #f2f2f2;
+  font-family: 'Open Sans', Helvetica, sans-serif;
 }
 
 .body-width-6bc76 {
@@ -40,6 +41,8 @@
 
 .right-5b016 {
   float: right;
+  font-size: 14px;
+  font-weight: 400;
   padding-left: 16px;
   padding-right: 16px;
 }
@@ -63,6 +66,19 @@
   float: right;
   min-height: 600px;
   width: 700px;
+}
+
+.header-4709c {
+  font-weight: 300;
+  font-size: 42px;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.header-ae295 {
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
 }
 
 /*------------------------------------------------------------------------------
@@ -163,7 +179,7 @@
 ------------------------------------------------------------------------------*/
 
 .pln {
-  color: #c5c8c6;
+  color: #eee;
 }
 @media screen {
   .str {
@@ -247,8 +263,8 @@
 
 pre.prettyprint {
   background: #1d1f21;
-  font-family: Menlo, Monaco, Consolas, monospace;
-  font-size: 12px;
+  font-family: 'Inconsolata', Menlo, Monaco, Consolas, Courier, monospace;
+  font-size: 14px;
   line-height: 1.5;
   border: 1px solid #ccc;
   padding: 10px;
