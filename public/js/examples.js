@@ -3,8 +3,8 @@ console.log = console.log || function() {};
 
 (function() {
 
-var EXAMPLES;
-var SECTIONS = [
+var EXAMPLES,
+  SECTIONS = [
   "Basic Usage",
   "Formatting",
   "Sorting",
@@ -20,6 +20,7 @@ var SECTIONS = [
 // Data Wranglin'
 //------------------------------------------------------------------------------
 
+// TODO: store examples to localStorage with an expiration time
 function fetchExamples(next) {
   $.getJSON('examples.json', function(result) {
     EXAMPLES = result;
