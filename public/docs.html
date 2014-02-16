@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>crazytable.js &raquo; Docs</title>
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="css/normalize-3.0.0.min.css" />
+  <link rel="stylesheet" href="css/site.css" />
+  <link rel="stylesheet" href="css/crazytable-dev.css" />
+  <!-- TODO: bring these in locally -->
+  <link href="http://fonts.googleapis.com/css?family=Inconsolata:400,700|Open+Sans:400,300,700" rel="stylesheet" type="text/css">
+</head>
+<body class="body-b376b">
+
+<div class="header-wrapper-39c0b">
+<div class="body-width-6bc76">
+  <a href="index.html" class="link-c1350 left-6ae92">crazytable.js</a>
+  <a href="download.html" class="link-c1350 right-5b016">Download</a>
+  <a href="docs.html" class="link-c1350 right-5b016">&raquo; Docs</a>
+  <a href="examples.html" class="link-c1350 right-5b016">Examples</a>
+  <a href="index.html" class="link-c1350 right-5b016">Home</a>
+  <div class="clearfix-2e227"></div>
+</div><!-- end .body-width-6bc76 -->
+</div><!-- end .header-wrapper-39c0b -->
+
+<div class="body-width-6bc76 main-f7281">
+TODO: docs
+</div><!-- end .main-f7281 -->
+
+<div class="footer-wrapper-ac3f6">
+<div class="body-width-6bc76">
+  <div class="left-ee342">
+    <p class="p-0b9e9">crazytable.js is released under the <a href="" class="link-d2e2c">MIT License</a></p>
+    <p class="p-0b9e9"><a href="" class="link-d2e2c">GitHub</a></p>
+  </div>
+  <div class="right-a04bd">
+    <a href="index.html" class="nav-link-5db48">Home</a>
+    <a href="examples.html" class="nav-link-5db48">Examples</a>
+    <a href="docs.html" class="nav-link-5db48">Docs</a>
+    <a href="download.html" class="nav-link-5db48">Download</a>
+  </div>
+  <div class="clearfix-2e227"></div>
+</div>
+</div><!-- end .footer-wrapper-ac3f6 -->
+
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/jquery.color.min.js"></script>
+<script>
+function flashRow(id) {
+  var el = $(document.getElementById(id));
+  var bgColor = el.css('background-color');
+  el.css('background-color', '#ffff99')
+    .animate({backgroundColor: bgColor}, 2000);
+}
+
+function isRow(id) {
+  return id.search(/\:/) !== -1;
+}
+
+function clickAnchor(e) {
+  var id = $(this).attr('href').replace(/docs#/, '');
+  if (isRow(id) === true) {
+    flashRow(id);
+  }
+}
+
+function init() {
+  $('body').on('click', 'a', clickAnchor);
+
+  // give it just a smidge more time to load
+  setTimeout(function() {
+    if (isRow(window.location.hash) === true) {
+      flashRow(window.location.hash.replace('#', ''));
+    }
+  }, 150);
+}
+$(document).ready(init);
+</script>
+</body>
+</html>
