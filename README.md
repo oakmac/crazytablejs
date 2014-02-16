@@ -5,7 +5,7 @@ Goals:
 - no dependencies
 - progressive enhancement for existing tables in the DOM
 - all options overridable
-- support for 1,000,000 rows
+- support for 1,000,000 rows (does this make sense?)
 - support for callback data (ie: ajax support)
 - UUCSS classes for every element
 - support for row drawers
@@ -92,12 +92,12 @@ rowClass - string or function
 
 
 Areas of concern:
-- 
+- TODO
 
 Areas of *no* concern:
 - anything "inside" a cell or header (HTML)
 - methods of requesting data (ie: AJAX)
-- the way the table looks (ie: CSS), crazytable provides plenty of access to add CSS classes and even style attributes directly on <td> elements, but purposefully does not do any style calculations on the table
+- the way the table looks (ie: CSS), crazytable provides plenty of access to add CSS classes and even style attributes directly on elements, but purposefully does not do any style calculations on the table
 
 Open questions:
 - how to handle colgroups?
