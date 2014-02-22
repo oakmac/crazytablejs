@@ -1,0 +1,45 @@
+=== Name
+onMouseLeaveRow
+
+=== Description
+Use the <code>headerHTML</code> property on a column to format cells in that column. <code>headerHTML</code> can either be a template string or a function.
+
+=== HTML
+<div id="fruits"></div>
+
+=== JS
+var fruits = [
+  { name: "apple", color: "red", quantity: 11 },
+  { name: "banana", color: "yellow", quantity: 10 },
+  { name: "orange", color: "orange", quantity: 8 }
+];
+
+function buildNameCell(data) {
+  return data.name.toUpperCase();
+}
+
+function buildColorCell(data) {
+  return '<span style="color: ' + data.color + '">' +
+    data.color + '</span>';
+}
+
+function buildQuantityCell(data) {
+  if (data.quantity >= 10) {
+    return 'more than 10';
+  }
+
+  return data.quantity;
+}
+
+// TODO: show an example of sort direction for headerHTML function here
+
+var columns = [
+  { headerHTML: "Name", cellHTML: buildNameCell },
+  { headerHTML: "Color", cellHTML: buildColorCell },
+  { headerHTML: "Quantity", cellHTML: buildQuantityCell }
+];
+
+var table = new CrazyTable('fruits', {
+  columns: columns,
+  data: fruits
+});

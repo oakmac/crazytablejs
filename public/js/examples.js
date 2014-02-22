@@ -130,8 +130,9 @@ function showExample(example) {
   
   prettyPrint();
 
-  // run the example - omg! eval is evil ;)
-  eval(example.JS);
+  // wrap the example JS in an anonymous function and execute
+  // omg! eval is evil ;)
+  eval('(function() {' + example.JS + '})()');
 }
 
 function loadExampleFromHash() {

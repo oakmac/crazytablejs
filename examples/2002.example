@@ -1,8 +1,8 @@
 === Name
-Build Table From JavaScript
+Footer HTML
 
 === Description
-crazytable.js can build an HTML table from JavaScript data.
+Use the <code>footerHTML</code> property on a column to format the footer cell for that column. <code>footerHTML</code> can either be a template string or a function.
 
 === HTML
 <div id="fruits"></div>
@@ -19,6 +19,9 @@ var columns = [
   { headerHTML: "Color", cellHTML: "{color}" },
   { headerHTML: "Quantity", cellHTML: "{quantity}" }
 ];
+
+// TODO: pass in all the data for the table to the footerHTML function?
+//       need to come up with the function definition here
 
 var table = new CrazyTable('fruits', {
   columns: columns,

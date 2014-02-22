@@ -1,8 +1,8 @@
 === Name
-Build Table From JavaScript
+Header HTML Function
 
 === Description
-crazytable.js can build an HTML table from JavaScript data.
+Use the headerHTML property on a column to format the header cell for that column. headerHTML can either be a template string or a function.
 
 === HTML
 <div id="fruits"></div>

@@ -1,0 +1,36 @@
+=== Name
+Cell HTML
+
+=== Description
+Use the <code>cellHTML</code> property on a column to format cells in that column. <code>cellHTML</code> can either be a template string or a function.
+
+=== HTML
+<div id="fruits"></div>
+
+=== JS
+var fruits = [
+  { name: "apple", color: "red", quantity: 11 },
+  { name: "banana", color: "yellow", quantity: 10 },
+  { name: "orange", color: "orange", quantity: 8 }
+];
+
+var colorCellTmpl = '<span style="color: {color}">{color}</span>';
+
+function buildQuantityCell(data) {
+  if (data.quantity >= 10) {
+    return 'more than 10';
+  }
+
+  return data.quantity;
+}
+
+var columns = [
+  { headerHTML: "Name", cellHTML: "{name}" },
+  { headerHTML: "Color", cellHTML: colorCellTmpl },
+  { headerHTML: "Quantity", cellHTML: buildQuantityCell }
+];
+
+var table = new CrazyTable('fruits', {
+  columns: columns,
+  data: fruits
+});
